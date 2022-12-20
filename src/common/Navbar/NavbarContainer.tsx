@@ -1,5 +1,5 @@
-const NavbarContainer = () => {
-  return <div>NavbarContainer</div>;
-};
+import Navbar from "./Navbar";
+
+const NavbarContainer = () => <Navbar />;
 
 export default NavbarContainer;

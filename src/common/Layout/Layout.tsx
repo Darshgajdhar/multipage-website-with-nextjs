@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { LayoutProps } from "../../interfaces/interfaces";
+import NavbarContainer from "../Navbar/NavbarContainer";
 
 const Layout = ({ children, title }: LayoutProps) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children, title }: LayoutProps) => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
+        <NavbarContainer />
         <main>{children}</main>
       </div>
     </>

@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["assets.wired.com"],
+    domains: [
+      "zoro.to",
+      "assets.wired.com",
+      "img.zorores.com",
+      "cdn.myanimelist.net",
+    ],
   },
 };
 

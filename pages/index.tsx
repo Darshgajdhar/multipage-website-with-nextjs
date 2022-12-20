@@ -1,10 +1,12 @@
 import LayoutContainer from "../src/common/Layout/LayoutContainer";
-import { Typography } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 
 export default function Home() {
   return (
     <LayoutContainer title="Home">
-      <Typography variant="h3">Hello Next Js Home page</Typography>
+      <Container>
+        <Typography variant="h3">Hello Next Js Home page</Typography>
+      </Container>
     </LayoutContainer>
   );
 }
