@@ -1,7 +1,7 @@
-import { CardProps } from "../../interfaces/interfaces";
+import { CardDetails } from "../../interfaces/interfaces";
 import CardList from "./CardList";
 
-const CardListContainer = ({ dataList, title }: CardProps) => (
+const CardListContainer = ({ dataList, title }: CardDetails) => (
   <CardList dataList={dataList} title={title} />
 );
 

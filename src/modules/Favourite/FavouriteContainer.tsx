@@ -1,7 +1,7 @@
-import { ApiProps } from "../../interfaces/interfaces";
+import { ApiDetails, FavouriteDetails } from "../../interfaces/interfaces";
 import Favourite from "./Favourite";
 
-const FavouriteContainer = ({ dataList }: ApiProps) => (
+const FavouriteContainer = ({ dataList }: FavouriteDetails) => (
   <Favourite dataList={dataList} />
 );
 

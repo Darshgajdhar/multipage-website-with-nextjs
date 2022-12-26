@@ -1,11 +1,11 @@
 import CardListContainer from "../../common/CardList/CardListContainer";
 import LayoutContainer from "../../common/Layout/LayoutContainer";
-import { ApiProps } from "../../interfaces/interfaces";
+import { FavouriteDetails } from "../../interfaces/interfaces";
 
-const Favourite = ({ dataList }: ApiProps) => {
+const Favourite = ({ dataList }: FavouriteDetails) => {
   return (
     <LayoutContainer title="Favourite Series">
-      <CardListContainer title="Favourite" dataList={dataList} />
+      <CardListContainer title="Favourite" dataList={dataList.data} />
     </LayoutContainer>
   );
 };

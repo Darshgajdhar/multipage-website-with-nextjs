@@ -17,6 +17,8 @@ export const CardComponent = styled(Card, { name: "CardComponent" })`
   flex-direction: column;
   width: 250px;
   height: 520px;
+  background-image: linear-gradient(to top, #605f5f 0%, black 100%);
+
   img {
     background-origin: border-box;
     background-size: cover;
@@ -45,7 +47,7 @@ export const Type = styled(Box, { name: "Type" })`
 `;
 
 export const Episodes = styled(Box, { name: "EpisodeLength" })`
-  padding: 0px 2px;
+  width: auto;
   height: 25px;
   background-color: #83e0f1;
   font-weight: bold;
@@ -62,9 +64,11 @@ export const ListType = styled(Box, { name: "ListType" })`
 export const Title = styled(Typography, { name: "Title" })`
   font-size: 15px;
   padding: 15px;
+  color: white;
   :hover {
     color: #cae962;
   }
+  width: fit-content;
 `;
 
 export const ShowInfo = styled(Box, { name: "ShowInfo" })`

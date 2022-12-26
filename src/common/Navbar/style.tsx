@@ -8,6 +8,9 @@ export const NavbarComponent = styled(Box, { name: "NavbarComponent" })`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `;
 
 export const NavbarLeftWrapper = styled(Box, { name: "NavbarWrapper" })`
@@ -16,6 +19,9 @@ export const NavbarLeftWrapper = styled(Box, { name: "NavbarWrapper" })`
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const NavbarImageWrapper = styled(Box, {
@@ -48,6 +54,9 @@ export const NavbarSearchField = styled(TextField, {
       border: none;
     }
   }
+  label {
+    color: #808080;
+  }
 `;
 
 export const NavbarTypeList = styled(Box, { name: "NavbarTypeList" })`
@@ -66,6 +75,9 @@ export const NavbarTypeList = styled(Box, { name: "NavbarTypeList" })`
       background-color: #cae962;
     }
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavbarRightWrapper = styled(Box, {
@@ -74,4 +86,7 @@ export const NavbarRightWrapper = styled(Box, {
   display: flex;
   align-items: center;
   margin: 0px 50px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

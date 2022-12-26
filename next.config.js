@@ -8,6 +8,7 @@ const nextConfig = {
       "assets.wired.com",
       "img.zorores.com",
       "cdn.myanimelist.net",
+      "images.pexels.com",
     ],
   },
 };

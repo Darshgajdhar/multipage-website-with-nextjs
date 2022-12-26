@@ -1,5 +1,5 @@
-import { ButtonProps } from "../../interfaces/interfaces";
+import { ButtonValue } from "../../interfaces/interfaces";
 
-const CustomButton = ({ children, buttonType }: ButtonProps) => (
+const CustomButton = ({ children, buttonType }: ButtonValue) => (
   <div>Button</div>
 );

@@ -1,11 +1,12 @@
 import Head from "next/head";
-import { LayoutProps } from "../../interfaces/interfaces";
+import { LayoutDetails } from "../../interfaces/interfaces";
 import NavbarContainer from "../Navbar/NavbarContainer";
+import { LayoutWrapper } from "./style";
 
-const Layout = ({ children, title }: LayoutProps) => {
+const Layout = ({ children, title }: LayoutDetails) => {
   return (
     <>
-      <div>
+      <LayoutWrapper>
         <Head>
           <title>{title}</title>
           <meta
@@ -14,8 +15,8 @@ const Layout = ({ children, title }: LayoutProps) => {
           />
         </Head>
         <NavbarContainer />
-        <main>{children}</main>
-      </div>
+        <LayoutWrapper>{children}</LayoutWrapper>
+      </LayoutWrapper>
     </>
   );
 };

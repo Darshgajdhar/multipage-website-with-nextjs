@@ -1,4 +1,5 @@
 import { styled, Button } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 
 export const LoginButton = styled(Button, {
   name: "LoginButton",
@@ -18,7 +19,7 @@ export const WatchButton = styled(Button, { name: "WatchButton" })`
   color: white;
   background-color: #cae962;
   texttransform: capitalize;
-  margin: 10px;
+  margin: 10px 0px;
   width: 120px;
   :hover {
     background-color: #fff8c3;
@@ -38,3 +39,9 @@ export const AddList = styled(Button, { name: "AddList" })`
     color: #cae962;
   }
 `;
+
+export const ButtonIcon = styled(IconButton, {
+  name: "ButtonIcon",
+})({
+  color: "white",
+});

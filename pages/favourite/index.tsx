@@ -1,22 +1,23 @@
-import { ApiProps } from "../../src/interfaces/interfaces";
+import { ApiDetails, FavouriteDetails } from "../../src/interfaces/interfaces";
 import FavouriteContainer from "../../src/modules/Favourite/FavouriteContainer";
+import { getAnimeList } from "../../src/store/API/AnimeList";
+import { makeStore } from "../../src/store/configureStore";
 
-const BASE_URL = "https://api.jikan.moe/v4";
-
-const Favourite = ({ dataList }: ApiProps) => {
-  return <FavouriteContainer dataList={dataList} />;
+const Favourite = ({ dataList }: FavouriteDetails) => {
+  const testData = dataList;
+  console.log({ testData });
+  return <FavouriteContainer dataList={testData} />;
 };
 
 export default Favourite;
 
-export const getApiData = async () => {
-  const res = await fetch(`${BASE_URL}/anime?page=1`);
-  const data = await res.json();
-  return data;
-};
+export const getServerSideProps = async () => {
+  const store = makeStore();
+  const data = await store.dispatch(getAnimeList.initiate());
 
-export async function getServerSideProps() {
-  const data = await getApiData();
-  const dataList = data?.data;
-  return { props: { dataList } };
-}
+  return {
+    props: {
+      dataList: data?.data,
+    },
+  };
+};
