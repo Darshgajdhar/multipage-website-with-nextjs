@@ -1,14 +1,14 @@
 import Head from "next/head";
 import { LayoutDetails } from "../../interfaces/interfaces";
+import FooterContainer from "../Footer/FooterContainer";
 import NavbarContainer from "../Navbar/NavbarContainer";
 import { LayoutWrapper } from "./style";
 
-const Layout = ({ children, title }: LayoutDetails) => {
+const Layout = ({ children }: LayoutDetails) => {
   return (
     <>
       <LayoutWrapper>
         <Head>
-          <title>{title}</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -16,6 +16,7 @@ const Layout = ({ children, title }: LayoutDetails) => {
         </Head>
         <NavbarContainer />
         <LayoutWrapper>{children}</LayoutWrapper>
+        <FooterContainer />
       </LayoutWrapper>
     </>
   );

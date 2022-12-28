@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 
 export interface LayoutDetails {
   children: ReactNode;
-  title?: string | "Next App";
 }
 
 export interface ButtonValue {
@@ -49,6 +48,9 @@ export interface PopularList {
   episodes?: number;
   duration?: string;
   type?: string;
+}
+{
+  /*Remove*/
 }
 
 export interface PopularDetails {
@@ -113,6 +115,9 @@ export interface PopularData {
   images: { jpg: { image_url: string } };
   mal_id: number;
   type?: string;
+}
+{
+  /*Remove*/
 }
 
 export interface DrawerData {

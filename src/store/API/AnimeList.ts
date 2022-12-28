@@ -16,10 +16,10 @@ export const animeApi = createApi({
   },
   tagTypes: ["animeApi"],
   endpoints: (builder) => ({
-    getAnimeList: builder.query<object, void>({
-      query: () => {
+    getAnimeList: builder.query<object, { page: number }>({
+      query: ({ page }) => {
         return {
-          url: `/anime?page=10`,
+          url: `/anime?page=${page}`,
           method: "GET",
         };
       },

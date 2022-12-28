@@ -7,7 +7,6 @@ import {
   NavbarRightWrapper,
   NavbarTypeList,
 } from "./style";
-import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import { LoginButton } from "../Button/style";
@@ -19,36 +18,38 @@ const Navbar = () => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <NavbarComponent>
-      <NavbarLeftWrapper>
-        <NavbarImageWrapper>
-          <Image
-            alt="Logo"
-            src={"https://zoro.to/images/logo.png"}
-            height="50"
-            width="200"
-          />
-        </NavbarImageWrapper>
-        {isMatch ? (
-          <DrawerContainer />
-        ) : (
-          <NavbarTypeList>
-            <Link href={"/home"}>Home</Link>
-            <Link href={"/favourite"}>Favourite</Link>
-            <Link href={"/trending"}>Trending</Link>
-            <Link href={"/popular"}>Popular</Link>
-          </NavbarTypeList>
-        )}
-      </NavbarLeftWrapper>
-      <NavbarRightWrapper>
-        <NavbarSearchWrapper>
-          <NavbarSearchField label="Search" size="small" color="secondary" />
-          {/* Reminder: To use InputBase in place of TextField */}
-          <SearchIcon />
-        </NavbarSearchWrapper>
-        <LoginButton variant="outlined">LOGIN</LoginButton>
-      </NavbarRightWrapper>
-    </NavbarComponent>
+    <header>
+      <NavbarComponent>
+        <NavbarLeftWrapper>
+          <NavbarImageWrapper>
+            <Image
+              alt="Logo"
+              src={"https://zoro.to/images/logo.png"}
+              height="50"
+              width="200"
+            />
+          </NavbarImageWrapper>
+          {isMatch ? (
+            <DrawerContainer />
+          ) : (
+            <NavbarTypeList>
+              <Link href={"/home"}>Home</Link>
+              <Link href={"/favourite"}>Favourite</Link>
+              <Link href={"/trending"}>Trending</Link>
+              <Link href={"/popular"}>Popular</Link>
+            </NavbarTypeList>
+          )}
+        </NavbarLeftWrapper>
+        <NavbarRightWrapper>
+          <NavbarSearchWrapper>
+            <NavbarSearchField label="Search" size="small" color="secondary" />
+            {/* Reminder: To use InputBase in place of TextField */}
+            <SearchIcon />
+          </NavbarSearchWrapper>
+          <LoginButton variant="outlined">LOGIN</LoginButton>
+        </NavbarRightWrapper>
+      </NavbarComponent>
+    </header>
   );
 };
 

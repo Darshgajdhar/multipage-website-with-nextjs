@@ -151,7 +151,7 @@ export const RightWrapper = styled(Box, {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //
+  height: auto;
   @media (max-width: 768px) {
     margin: 30px 50px;
     padding: 25px 15px;
